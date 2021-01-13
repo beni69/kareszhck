@@ -1,5 +1,3 @@
-// alert("xd");
-// buyKareszGenerator(${request[1]})
 chrome.runtime.onMessage.addListener(function (request) {
     const injectedCode = `
     ${request[0] != "" ? `kareszCount=${request[0]};` : ""}
