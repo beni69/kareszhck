@@ -2,7 +2,7 @@
     "name": "Karesz Clicker Hack",
     "description": "420 karesz speedrun wr any%",
     "icons": {"128": "./images/karesz.png"},
-    "version": "1.2.2",
+    "version": "1.2.3",
     "manifest_version": 2,
     "browser_action": {
         "default_icon": "./images/karesz.png",
