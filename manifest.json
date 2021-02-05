@@ -11,8 +11,9 @@
     "content_scripts": [
         {
             "matches": [
-                "*://tomasajt.github.io/kareszClicker/",
-                "*://beni69.github.io/kareszClicker/"
+                "*://tomasajt.github.io/",
+                "*://beni69.github.io/",
+                "*://karesz.xyz"
             ],
             "js": ["content.js"]
         }
