@@ -1,30 +1,27 @@
-// function setKaresz() {
-// const number = document.getElementById("number");
-
-//     const js = `alert('cock');`;
-//     const script = document.createElement("script");
-//     script.innerHTML = js;
-//     document.head.appendChild(script);
-// }
-
 document.addEventListener(
     "DOMContentLoaded",
-    function () {
+    () => {
         document
             .querySelector("button")
             .addEventListener("click", onclick, false);
+
         function onclick() {
-            const number = document.getElementById("number");
+            const count = document.getElementById("count");
             const kps = document.getElementById("kps");
             const kpc = document.getElementById("kpc");
+            const unlockall = document.getElementById("unlockall");
             chrome.tabs.query(
-                {currentWindow: true, active: true},
-                function (tabs) {
-                    chrome.tabs.sendMessage(tabs[0].id, [
-                        number.value,
-                        kps.value,
-                        kpc.value,
-                    ]);
+                {
+                    currentWindow: true,
+                    active: true,
+                },
+                tabs => {
+                    chrome.tabs.sendMessage(tabs[0].id, {
+                        count: count.value,
+                        kps: kps.value,
+                        kpc: kpc.value,
+                        unlockall: unlockall.checked,
+                    });
                 }
             );
             window.close();
