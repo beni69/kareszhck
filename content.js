@@ -1,5 +1,3 @@
-let showmsg = true;
-
 chrome.runtime.onMessage.addListener(request => {
     if (
         !confirm(
@@ -28,10 +26,10 @@ chrome.runtime.onMessage.addListener(request => {
     console.debug(request);
     console.debug(script.textContent);
 
-    if (showmsg) {
+    if (!localStorage.getItem("hackOverwriteWarning")) {
         alert(
             "Done. To receive your Karesz, click the load button.\n\nThis message will only show once"
         );
-        showmsg = false;
+        localStorage.setItem("hackOverwriteWarning", true);
     }
 });
