@@ -4,7 +4,6 @@ document.addEventListener(
         document
             .querySelector("button")
             .addEventListener("click", onclick, false);
-
         function onclick() {
             const count = document.getElementById("count");
             const kps = document.getElementById("kps");
@@ -20,7 +19,7 @@ document.addEventListener(
                         count: count.value,
                         kps: kps.value,
                         kpc: kpc.value,
-                        unlockall: unlockall.checked,
+                        unlock: unlockall.checked,
                     });
                 }
             );
