@@ -1,0 +1,9 @@
+:root {
+    /* background-color: #121212;
+    color: white; */
+    font-family: "Open Sans";
+}
+
+form :is(input, label) {
+    margin: 0.25rem;
+}
