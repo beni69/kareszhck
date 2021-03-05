@@ -2,21 +2,15 @@
     "name": "Karesz Clicker Hack",
     "description": "420 karesz speedrun wr any%",
     "icons": { "128": "./images/karesz.png" },
+
     "version": "3.0.0",
-    "manifest_version": 2,
-    "browser_action": {
+    "manifest_version": 3,
+
+    "action": {
         "default_icon": "./images/karesz.png",
-        "default_popup": "./src/popup.html"
+        "default_popup": "./src/popup.html",
+        "default_title": "Get all the Karesz you want"
     },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://tomasajt.github.io/*",
-                "*://beni69.github.io/*",
-                "*://karesz.xyz/*",
-                "*://*.karesz.xyz/*"
-            ],
-            "js": ["content.js"]
-        }
-    ]
+
+    "permissions": ["scripting", "activeTab"]
 }
